@@ -1,0 +1,14 @@
+# docker-compose.prod.yml
+version: '3.8'
+services:
+  web:
+    image: ghcr.io/AndreyOleschenko/alpina_bot:latest
+    container_name: alpina_bot_web
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
+      - ./.env:/app/.env
+    environment:
+      - DJANGO_SETTINGS_MODULE=bot_constructor.settings
