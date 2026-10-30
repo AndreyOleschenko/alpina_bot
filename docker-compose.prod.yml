@@ -2,7 +2,7 @@
 version: '3.8'
 services:
   web:
-    image: ghcr.io/AndreyOleschenko/alpina_bot:latest
+    image: ghcr.io/andreyoleschenko/alpina_bot:latest
     container_name: alpina_bot_web
     restart: always
     ports:
